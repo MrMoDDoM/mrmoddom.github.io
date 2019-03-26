@@ -6,6 +6,6 @@ layout: single
 author_profile: true
 ---
 
-# Hi all!
+Hi all!
 
 I'm Daniele, aka MrMoDDoM!

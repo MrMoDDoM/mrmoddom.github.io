@@ -4,7 +4,7 @@ main:
     url: /about/
   # - title: "Projects"
   #   url: /year-archive/
-  # - title: "CTF & Writeups"
-  #   url: /collection-archive/
+  - title: "CTF & Writeups"
+    url: /ctf/
   - title: "Search"
     url: /search/
