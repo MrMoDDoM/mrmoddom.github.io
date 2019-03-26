@@ -1,9 +1,6 @@
 ---
 title: ROP Re-call hack
-excert: When you hear the call! 
-header:
-  teaser: /assets/images/404.gif
-  image: /assets/images/404.gif
+excert: When you hear the call!
 tags:
  - ROP
  - chain
