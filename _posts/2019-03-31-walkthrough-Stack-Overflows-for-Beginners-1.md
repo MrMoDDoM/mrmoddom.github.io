@@ -447,7 +447,7 @@ cat: /root/root.txt: Permission denied
 $ 
 ```
 
-W00T! Why we can't read that file? Why we are not root?? :sad:
+W00T! Why we can't read that file? Why we are not root?? :sob:
 
 Analizing the main function into gdb, we eventually find out that this time the code __does not__ call the ```setuid``` function, preventing our shell to run as root.
 
@@ -490,8 +490,22 @@ $
 
 BOOM! G0tR00T!
 
+## Final thoughts 
+
+There are still some questions in my mind..
+
+First of all, why the Ret-to-libc gadget works? I mean, the binary is compiled with the ```PIE``` enabled, so theoretically the libc's base address should be randomized at every run, but this is not the case 'cause our exploit works fine.
+
+Second why should be so many ```jmp esp``` instructions inside libc? In wich cases these intructions are usefull? :confused:
+I never heard about a situation where a procedure inside the libc would jumps to its stack pointer, this means that libc can run program in memory region that can be written too?? 
+
+If anybody know, please write a comment below or reach me on [Twitter][5]
+
+Anyway, this VM is a good introduction to binary exploitation, I would like to see something different from level3 and on, especially challenges that would require differents exploting techniques. :bowtie:
+
 ---
 [1]: https://www.vulnhub.com/entry/stack-overflows-for-beginners-1,290/
 [2]: https://github.com/longld/peda
 [3]: https://github.com/Gallopsled/pwntools
 [4]: https://wiremask.eu/tools/buffer-overflow-pattern-generator/
+[5]: https://twitter.com/MrMoDDoM
