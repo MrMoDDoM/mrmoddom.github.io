@@ -358,6 +358,11 @@ level2@kali:~$ ldd ./levelThree
 	libc.so.6 => /lib32/libc.so.6 (0xf7dc9000)
 	/lib/ld-linux.so.2 (0xf7fd4000)
 ```
+---
+**UPDATE**
+Never trust ```ldd```, sometime it simple displays the wrong address, it's safer use the address displayed by the gdb-peda's ```vmmap``` command, the first one on the left column on the first ```libc``` row: remember the ```libc``` are loaded at runtime, so you need to start and break the program to see the correct base address.
+
+---
 
 Take that addres beside libc and sum it: ```0xf7dc9000 + 0xbff7 = 0xf7dd4ff7```
 
@@ -494,7 +499,9 @@ BOOM! G0tR00T!
 
 There are still some questions in my mind..
 
-First of all, why the Ret-to-libc gadget works? I mean, the binary is compiled with the ```PIE``` enabled, so theoretically the libc's base address should be randomized at every run, but this is not the case 'cause our exploit works fine.
+~~First of all, why the Ret-to-libc gadget works? I mean, the binary is compiled with the ```PIE``` enabled, so theoretically the libc's base address should be randomized at every run, but this is not the case 'cause our exploit works fine.~~
+
+**UPDATE** The ```PIE``` mechanism works only the the binary's base address, leaving the libc's base intact.. that's why my exploit works - my bad :smile: 
 
 Second why should be so many ```jmp esp``` instructions inside libc? In wich cases these intructions are usefull? :confused:
 I never heard about a situation where a procedure inside the libc would jumps to its stack pointer, this means that libc can run program in memory region that can be written too?? 
