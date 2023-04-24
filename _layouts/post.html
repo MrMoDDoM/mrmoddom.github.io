@@ -48,7 +48,7 @@ tail_includes:
   <div class="d-flex justify-content-between">
     <!-- author(s) -->
     <span>
-      {% if page.author %}
+      <!-- {% if page.author %}
         {% assign authors = page.author %}
       {% elsif page.authors %}
         {% assign authors = page.authors %}
@@ -65,9 +65,10 @@ tail_includes:
       {% else %}
         <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
       {% endif %}
-      </em>
+      </em> -->
+      {% include read-time.html content=content prompt=true %}
     </span>
-
+    
     <div>
       <!-- page views -->
       {% if site.google_analytics.pv.proxy_endpoint or site.google_analytics.pv.cache_path %}
@@ -80,7 +81,7 @@ tail_includes:
       {% endif %}
 
       <!-- read time -->
-      {% include read-time.html content=content prompt=true %}
+      
     </div>
 
   </div> <!-- .d-flex -->
