@@ -1,8 +1,6 @@
 ---
 title: Reversing a DRM
 excert: "Another poorly designed key derivation system"
-header:
- teaser: /assets/images/post/2021-11-21-DRM-reversing-teaser.png
 tags:
  - DRM
  - reversing
@@ -12,7 +10,6 @@ tags:
 category:
  - post
 toc: false
-pin: true
 permalink: /research/DRM-reversing/
 ---
 

@@ -11,7 +11,6 @@ tags:
 category:
  - research
 toc: true
-classes: single
 ---
 
 > Under construction
@@ -62,9 +61,12 @@ It is very important to run periodic vulnerability assessment and complete penet
 Nonetheless, LibraEsva were very quick in triaging and fixing the bug.
 
 ## Disclosure Timeline
-18-03-2021 LibraEsva's developers team informed about the vuln
-07-04-2021 Fix released with product version 4.9.5
-27-07-2021 Public release
+
+| Date | Description |
+| --- | --- |
+| 18-03-2021 | LibraEsva's developers team informed about the vuln |
+| 07-04-2021 | Fix released with product version 4.9.5 |
+| 27-07-2021 | Public release |
 
 ---
 [1]: https://github.com/symfony/symfony/blob/5.1/src/Symfony/Component/HttpKernel/EventListener/FragmentListener.php

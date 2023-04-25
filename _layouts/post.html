@@ -11,6 +11,14 @@ tail_includes:
 
 <h1 data-toc-skip>{{ page.title }}</h1>
 
+{% if page.toc %}
+  <script>
+    const my_wrapper = document.querySelectorAll('#core-wrapper');
+    my_wrapper[0].classList.remove('col-xl-12');
+    my_wrapper[0].classList.add('col-xl-9');
+  </script>
+{% endif %}
+
 <div class="post-meta text-muted">
     <!-- published date -->
     <span>

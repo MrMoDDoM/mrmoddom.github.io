@@ -1,18 +1,20 @@
 ---
 title: Walkthrough of Stack Overflows for Beginners (1) - Vulnhub
 excert: My first walkthrough!
-header:
- teaser: https://www.vulnhub.com/media/img/entry/stackoverflows-00-thumb.png
 tags:
  - Buffer Overflow
  - Shellcode
  - Stack
  - Binary
  - Walkthrough
+ - Vulnhub
+ - exploit
+ - ctf
 category:
+ - post
  - ctf
 toc: true
-classes: single
+permalink: /ctf/walkthrough-Stack-Overflows-for-Beginners-1/
 ---
 
 Hi all! 
