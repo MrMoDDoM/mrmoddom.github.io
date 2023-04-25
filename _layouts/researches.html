@@ -14,7 +14,7 @@ layout: page
   
             <div class="card-text post-content">
               <p>
-                {% include no-linenos.html content=post.content %}
+                {% include no-linenos.html content=post.excert %}
                 {{ content | markdownify | strip_html | truncate: 200 | escape }}
               </p>
             </div>
@@ -43,5 +43,10 @@ layout: page
       </div>
       <!-- .post-review -->
     {% endfor %}
+  </div>
+  <hr>
+  <h1>Pubblication</h1>
+  <div>
+    1. F. Cerutti, D. B. di San Pietro, F. Gringoli, and G. Lamperti, <b>“Looking for Criminal Intents in JavaScript Obfuscated Code”</b>, Procedia Computer Science, vol. 207. Elsevier BV, pp. 867–876, 2022. doi: <a href="https://doi.org/10.1016/j.procs.2022.09.142">https://doi.org/10.1016/j.procs.2022.09.142</a> (open access)
   </div>
   <!-- #post-list -->

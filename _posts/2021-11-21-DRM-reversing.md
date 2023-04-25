@@ -12,8 +12,8 @@ tags:
 category:
  - post
 toc: false
-classes: single
 pin: true
+permalink: /research/DRM-reversing/
 ---
 
 > This article was written with [@ceres-c](https://github.com/ceres-c/) and is available on his [website](https://ceres-c.it/2021/11/21/DRM-reversing/) as well.

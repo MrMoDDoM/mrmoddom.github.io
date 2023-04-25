@@ -10,6 +10,9 @@ category:
  - hack
 ---
 
+> Important: I've made my bachelor thesis on this topic, you can find it [here]({% post_url 2023-03-22-Ropper-recall %}).
+{: .prompt-info}
+
 Sometime doing a ROP chain is a real pain, especially when you don't have enough gadgets! 
 
 You could use a gadgets finder such as [Ropper][1] and most often you'll find gadgets ending with a ```call```: this could be very frustrating 'cause a ```call``` will break the rop-chain. Just remember that a ```call``` will __push a return address__ on the stack, making your target jumping back from the call right after the gadget.
